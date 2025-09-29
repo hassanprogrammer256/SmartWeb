@@ -126,7 +126,7 @@ const About = () => {
         <Grid size={{ xs: 2, sm: 4, md: 4 }} sx={{width:'100%',margin:'20px 0'}}>
           <Card size="lg" sx={{border:'1px solid gray',cursor:'pointer',transition:'all .3s ease-in-out',boxShadow:'-1px 1px 1px gray',bgcolor:'transparent',":hover":{border:'1px solid #c9f31d',translate:'0 5px'}}}>
 <Typography sx={{textAlign:'center',fontWeight:'500',fontSize:'20px',textTransform:'capitalize'}}>Email</Typography>
-<Typography sx={{textAlign:'center',fontWeight:'200',fontSize:'20px',textTransform:'lowercase',transition:'all ease .5s',color:'white',":hover":{color:'#c9f31d'}}}>thesmartagents.info@gmail.com</Typography>
+<Typography sx={{textAlign:'center',fontWeight:'500',fontSize:'20px',textTransform:'lowercase',transition:'all ease .5s',color:'white',":hover":{color:'#c9f31d'}}}>thesmartagents.info@gmail.com</Typography>
           </Card>
         </Grid>
         
