@@ -1,9 +1,7 @@
 
-import './App.css'
-import { Typography } from '@mui/material'
 import Header from './components/header'
 import { Routes,Route } from 'react-router'
-import Home from './pages/Home'
+
 import About from './pages/About'
 import Index from './pages'
 
