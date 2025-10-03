@@ -11,7 +11,7 @@ export const RapidLetterSearch = ({ word}) => {
 
     const targetLetter = word[currentIndex].toUpperCase();
     const generateRandomLetter = () => {
-      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ ';
+      const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ .';
       const generated_letter = alphabet[Math.floor(Math.random() * alphabet.length)].toUpperCase();
       return  generated_letter
     }

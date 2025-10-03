@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import About from './About'
 import {motion} from 'framer-motion'
 import {  Images , Icons } from '../configs'
 import {Medias} from  '../configs'
@@ -63,7 +62,7 @@ const words = ['Where Technology Meets Creativity', 'Teching You Ahead', 'Innova
      whileInView={{ opacity: 1, scale: 1 }}
     className="w-full flex-col justify-start md:justify-center align-center md:align-start flex  gap-3">
       <h1 className='text-white font-black lg:text-5xl md:text-4xl text-2xl xl:text-6xl uppercase text-left md:text-center break-words md:mb-52 font-kanit' >
-       <RapidLetterSearch word={'the smart agents Information and technology Solutions'} />
+       <RapidLetterSearch word={'smart agents and i.t Solutions'} />
         </h1>
         
         <p className="flex flex-col gap-3 font-bold text-gray-400">
