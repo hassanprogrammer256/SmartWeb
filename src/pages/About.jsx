@@ -2,7 +2,7 @@ import Tabs from '@mui/joy/Tabs';
 import TabList from '@mui/joy/TabList';
 import Tab from '@mui/joy/Tab';
 import TabPanel from '@mui/joy/TabPanel';
-import {Images} from '../configs'
+import {Images, Logos} from '../configs'
 import { Card, Grid, Typography } from '@mui/joy';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -14,11 +14,10 @@ import { SkillsTab } from './skills';
 
 const About = () => {
    const [value, setValue] = useState(0);
-  //  const location= useLocation().hash
+
 
    const TabsMenu = [
-    {name:'About',to:'#about',icon:FaInfoCircle},
-    {name:'Experience',to:'#experience',icon:Fa42Group},
+    {name:'Info',to:'#about',icon:FaInfoCircle},
     {name:'Skills',to:'#skills',icon:FaGears},
    ]
   const handleChange = (event, newValue) => {
@@ -73,13 +72,12 @@ const About = () => {
             },
           })}
         >
-      {el.name}
+      <el.icon size={30} color='#c9f31d' />{el.name}
         </Tab>
 ))}
       </TabList>
         <TabPanel value={0} sx={{ width: '100%', padding: 2 }}><AboutTab /> </TabPanel>
-        <TabPanel value={1} sx={{ width: '100%', padding: 2 }}><ExperienceTab /></TabPanel>
-        <TabPanel value={2} sx={{ width: '100%', padding: 2 }}><SkillsTab /></TabPanel>
+        <TabPanel value={1} sx={{ width: '100%', padding: 2 }}><SkillsTab /></TabPanel>
 
     </Tabs>
 </>
@@ -92,47 +90,229 @@ export default About;
 
 
 export const AboutTab = () => {
-  
- return(
+  return (
+    <motion.div
+      initial={{ y: 10, opacity: 0 }}
+      transition={{ type: 'spring', delay: 0.5, duration: 1 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      id="#about"
+      className="md:grid flex flex-col gap-4 md:grid-cols-[40%_60%] p-3"
+    >
+      {/* Location Image */}
+      <div className="flex justify-center items-center w-full">
+        <img
+          src={Images.YsanLocation}
+          alt="Location Image"
+          className="w-full items-end flex justify-center"
+        />
+      </div>
 
-
-<motion.div 
-initial={{y:10,opacity:0}}
-transition={{type:'spring',delay:.5,duration:1}}
-whileInView={{y:0,opacity:1}}
-id='#about'
-className="md:grid flex flex-col gap-4 md:grid-cols-[40%_60%] p-3">
-
-<div className="flex justify-center items-center w-full">
-  <img src={Images.YsanLocation} alt='Location Image' className='w-full items-end flex justify-center'/>
-</div>
-
-<div className="md:grid flex flex-col lg:grid-cols-2 w-full gap-5">
-<div>
-  <Card size="lg" sx={{border:'1px solid gray',width:'100%', cursor:'pointer',transition:'all .3s ease-in-out',boxShadow:'-1px 1px 1px gray',bgcolor:'transparent',":hover":{border:'1px solid #c9f31d',translate:'0 5px'}}}>
-        <div className="flex flex-col w-full">
-  <h3 className='text-gray-400 font-black text-xl text-center truncate capitalize'>Email</h3>
-  <h4 className='text-sm md:text-xl text-white font-bold cursor-pointer hover:text-lemon_green transition-all lowercase text-center hover:underline underline-offset-8'><a href="mailto:smartagent.it@gmail.com">smartagent.it@gmail.com</a></h4>
+      {/* Info Cards */}
+      <div className="md:grid flex flex-col lg:grid-cols-2 lg:flex-row  w-full gap-5 overflow-auto max-h-[600px] max-w-full">
+        {/* Email Card */}
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+            <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Email
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer hover:text-lemon_green transition-all lowercase text-center hover:underline underline-offset-8">
+                <a href="mailto:smartagent.it@gmail.com">smartagent.it@gmail.com</a>
+              </h4>
+            </div>
+          </Card>
         </div>
-  
-            </Card>
-</div>
 
-<div>
-  <Card size="lg" sx={{border:'1px solid gray',width:'100%', cursor:'pointer',transition:'all .3s ease-in-out',boxShadow:'-1px 1px 1px gray',bgcolor:'transparent',":hover":{border:'1px solid #c9f31d',translate:'0 5px'}}}>
-        <div className="flex flex-col w-full">
-  <h3 className='text-gray-400 font-black text-xl text-center truncate capitalize'>Location</h3>
-  <h4 className='text-sm md:text-xl text-white font-bold cursor-pointer hover:text-lemon_green transition-all lowercase text-center hover:underline underline-offset-8'>Kibuli
-  </h4>
+        {/* Location Card */}
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+            <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Location
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold  transition-all lowercase text-center">
+                Kibuli
+              </h4>
+            </div>
+          </Card>
         </div>
-  
-            </Card>
-</div>
+
+        {/* Phone Card */}
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+            <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Customer Helpline
+              </h3>
+              <div className="flex justify-center gap-4">
+                <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer hover:text-lemon_green transition-all lowercase text-center hover:underline underline-offset-8">
+                  <a href="tel:+256781183116">+256-781183116</a>
+                </h4>/
+                 <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer hover:text-amber-400 transition-all lowercase text-center hover:underline underline-offset-8">
+                  <a href="tel:+256755361642">+256-755361642</a>
+                </h4>
+              </div>
+             
+            </div>
+          </Card>
+        </div>
+
+        {/* Website Card */}
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+            <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Bussiness Hours
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
+              24/7
+              </h4>
+            </div>
+          </Card>
+        </div>
 
 
-</div>
+         {/* Website Card */}
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+                 <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Completed Projects
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
+              50+
+              </h4>
+            </div>
+          </Card>
+        </div>
+       
+        <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+                <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+               Established In
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
+             2021
+              </h4>
+            </div>
+          </Card>
+        </div>
 
-</motion.div>
+     <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+                 <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Happy Customers
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
+              70+
+              </h4>
+            </div>
+          </Card>
+        </div>
+             <div>
+          <Card
+            size="lg"
+            sx={{
+              border: '1px solid gray',
+              width: '100%',
+              cursor: 'pointer',
+              transition: 'all .3s ease-in-out',
+              boxShadow: '-1px 1px 1px gray',
+              bgcolor: 'transparent',
+              ":hover": { border: '1px solid #c9f31d', translate: '0 5px' },
+            }}
+          >
+                 <div className="flex flex-col w-full">
+              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+                Team Members
+              </h3>
+              <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
+              20+
+              </h4>
+            </div>
+          </Card>
+        </div>
 
- )
- }
+      </div>
+    </motion.div>
+  );
+};

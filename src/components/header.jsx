@@ -3,9 +3,33 @@ import {Logos} from '../configs'
 import { Menu } from '../configs'
 import { FaBars } from 'react-icons/fa'
 import { useLocation } from 'react-router'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
-const location = useLocation().hash
+const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPos = window.scrollY + 100;
+
+      sections.forEach((section) => {
+        if (
+          section.offsetTop <= scrollPos &&
+          section.offsetTop + section.offsetHeight > scrollPos
+        ) {
+          const newHash = `#${section.id}`;
+          if (window.location.hash !== newHash) {
+            window.history.replaceState(null, null, newHash);
+            setActiveHash(newHash);
+          }
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
   <>
@@ -21,7 +45,7 @@ const location = useLocation().hash
        {
         Menu.map((el,index) => (
             <li
-  className={`list-none flex gap-3 items-center ${location === el.to ? 'text-lemon_green' : ''}`}
+  className={`list-none flex gap-3 items-center ${activeHash === el.to ? 'text-lemon_green' : ''}`}
 >
                 <el.icon  size='20'/>
                 <a
