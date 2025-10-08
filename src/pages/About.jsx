@@ -9,7 +9,6 @@ import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router';
 import { FaInfoCircle } from 'react-icons/fa';
 import { Fa42Group, FaGears } from 'react-icons/fa6';
-import { ExperienceTab } from './experience';
 import { SkillsTab } from './skills';
 
 const About = () => {

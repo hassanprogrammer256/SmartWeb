@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from './Home'
 import About from './About'
+import Projects from './projects'
 
 const Index = () => {
   return (
@@ -9,9 +10,14 @@ const Index = () => {
       <Home />
     </section>
 
-  <section id="about" data-spy-scroll="true" className='p-3'>
+  <section id="about" data-spy-scroll="true" className='mb-10'>
       <About />
     </section>
+
+      <section id="projects" data-spy-scroll="true">
+      <Projects />
+    </section>
+    
     </>
 
   )

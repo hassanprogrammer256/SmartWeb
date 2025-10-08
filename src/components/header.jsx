@@ -45,7 +45,7 @@ const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
        {
         Menu.map((el,index) => (
             <li
-  className={`list-none flex gap-3 items-center ${activeHash === el.to ? 'text-lemon_green' : ''}`}
+  className={`list-none flex gap-3 items-center cursor-pointer transition-all ${activeHash === el.to ? 'text-lemon_green' : ''}`}
 >
                 <el.icon  size='20'/>
                 <a

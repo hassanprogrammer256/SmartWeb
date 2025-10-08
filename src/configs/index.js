@@ -42,7 +42,7 @@ export const Medias =  {
     export const Menu = [
         {name: 'Home',to:'#home',icon: FaHouse},
         {name: 'About',to:'#about',icon: FaInfoCircle},
-        {name: 'Projects',to:'#work',icon: FaFolderOpen},
+        {name: 'Projects',to:'#projects',icon: FaFolderOpen},
         {name: 'Services',to:'#services',icon:  GiSettingsKnobs },
         {name: 'Testimonials',to:'#testimonies',icon: FaThumbsUp},
     
