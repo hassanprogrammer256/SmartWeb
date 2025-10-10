@@ -140,10 +140,10 @@ export const SkillsTab = () => {
       >
         {/* Tool Info */}
         <div className="flex items-center gap-3 ">
-          <span className="rounded-lg bg-gray-700 cursor-pointer transition-all hover:translate-y-3 hover:bg-black/20 flex items-center justify-center p-2">
-            <tool.icon size={30} color="gray" />
+          <span className="rounded-lg bg-gray-900 cursor-pointer transition-all hover:translate-y-3 hover:bg-black/20 flex items-center justify-center p-2">
+            <tool.icon size={30} color="white" />
           </span>
-          <h4 className="text-left md:text-center font-black capitalize m-0 text-sm md:text-base">{tool.name}</h4>
+          <h4 className="text-left md:text-center font-black capitalize m-0 text-sm md:text-base text-gray-50">{tool.name}</h4>
         </div>
         {/* Progress Bar */}
         <div className="flex items-center w-full md:w-2/3">

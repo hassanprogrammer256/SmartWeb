@@ -64,7 +64,7 @@ const words = ['Where Technology Meets Creativity', 'Teching You Ahead', 'Innova
        <span>The Smart Agents I.T Solutions</span>
         </h1>
         
-        <p className="flex flex-col gap-3 font-bold text-gray-400">
+        <p className="flex flex-col gap-3 font-bold text-gray-50">
  <span  id ='typing-text' className={`md:text-3xl text-xl font-black break-words text-lemon_green ${animateLetters ? 'fade-out' : 'fade-in'}`}>  {letters.map((letter, index) => (
           <span
             key={index}

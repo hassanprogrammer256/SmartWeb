@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react'
 
 const Header = () => {
 const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
+const location = useLocation().pathname
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,15 +38,17 @@ const [activeHash, setActiveHash] = useState(window.location.hash || '#home');
 <div className='grid grid-cols-[30%_70%]'>
     <div className="flex gap-3 items-center">
         <img src={Logos.Logo_small} alt="logo" className='w-24'/>
-        <h4 className='font-permanent lg:text-xl hover:text-lemon_green cursor-pointer hover:underline transition-all hidden xl:block'>Smart Agents</h4>
+        <a href="#home">
+          <h4 className='font-permanent lg:text-xl hover:text-lemon_green cursor-pointer hover:underline transition-all hidden xl:block'>Smart Agents</h4>
+        </a>
     </div>
 
 <div className="flex justify-end items-center">
     <nav className="hidden gap-10  lg:flex">
        {
         Menu.map((el,index) => (
-            <li
-  className={`list-none flex gap-3 items-center cursor-pointer transition-all ${activeHash === el.to ? 'text-lemon_green' : ''}`}
+            <li onClick={() => {setActiveHash(el.to)}}
+  className={`list-none flex gap-3 items-center cursor-pointer transition-all ${activeHash === el.to? 'text-lemon_green' : ''}`}
 >
                 <el.icon  size='20'/>
                 <a

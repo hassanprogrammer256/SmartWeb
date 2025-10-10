@@ -105,7 +105,7 @@ const ProjectAll  = () => {
               <a href=""><img src={Logos.Logo_large} className='aspect-auto  cursor-pointer transition-all hover:opacity-50 rounded-lg mb-3' alt='project_image'/></a>
               <div className="flex flex-col items-center w-full">
                 <div className="flex justify-center  items-center w-full">
-                  <div className="grid grid-cols-2 md:grid-cols-4 w-full mb-3">
+                  <div className="grid grid-cols-2 md:grid-cols-4 w-full mb-3 gap-5">
                     <div className="flex  w-full items-center gap-3">
                         <FaThumbsUp color='blue' size={15}/><span className='text-gray-100 text-xs'>500+</span>
                     </div> 
@@ -123,7 +123,7 @@ const ProjectAll  = () => {
                   </div>
                 </div>
                 <div className="flex justify-center w-full mb-2">
-                    <h4 className="text-lg text-gray-200 font-black cursor-pointer hover:underline underline-offset-2 hover:text-lemon_green transition-all truncate">Project Name</h4>
+                    <h4 className="text-lg text-gray-50 font-black cursor-pointer hover:underline underline-offset-2 hover:text-lemon_green transition-all truncate">Project Name</h4>
                 </div>
                 <div className="w-full justify-center flex">
                      <Button sx={{background:'#c9f31d',transition:'all .3s ease',color:'black',fontWeight:'800'}} className=' hover:text-white cursor-pointer  w-full'>

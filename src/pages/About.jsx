@@ -123,7 +123,7 @@ export const AboutTab = () => {
             }}
           >
             <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Email
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer hover:text-lemon_green transition-all lowercase text-center hover:underline underline-offset-8">
@@ -148,7 +148,7 @@ export const AboutTab = () => {
             }}
           >
             <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-200 font-black text-xl text-center truncate capitalize">
                 Location
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold  transition-all lowercase text-center">
@@ -173,7 +173,7 @@ export const AboutTab = () => {
             }}
           >
             <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Customer Helpline
               </h3>
               <div className="flex justify-center gap-4">
@@ -204,7 +204,7 @@ export const AboutTab = () => {
             }}
           >
             <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Bussiness Hours
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
@@ -230,7 +230,7 @@ export const AboutTab = () => {
             }}
           >
                  <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Completed Projects
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
@@ -254,7 +254,7 @@ export const AboutTab = () => {
             }}
           >
                 <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                Established In
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
@@ -278,7 +278,7 @@ export const AboutTab = () => {
             }}
           >
                  <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Happy Customers
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
@@ -301,7 +301,7 @@ export const AboutTab = () => {
             }}
           >
                  <div className="flex flex-col w-full">
-              <h3 className="text-gray-400 font-black text-xl text-center truncate capitalize">
+              <h3 className="text-gray-50 font-black text-xl text-center truncate capitalize">
                 Team Members
               </h3>
               <h4 className="text-sm md:text-xl text-white font-bold cursor-pointer lowercase text-center">
